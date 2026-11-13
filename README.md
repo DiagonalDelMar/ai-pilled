@@ -1,6 +1,6 @@
 # AI-Pilled
 
-A swipe-style course that teaches AI from scratch to a non-technical compliance and investigations lawyer. It has 9 levels and 92 cards, with quizzes, match and order mini-games, XP, ranks, streaks, stars, and a "two lines" checkpoint at the end of each level. It works offline once installed.
+A swipe-style course that teaches AI from scratch to a non-technical compliance and investigations lawyer. It has 24 levels and 362 cards (about 3 hours), with quizzes, match and order mini-games, XP, ranks, streaks, stars, and a "two lines" checkpoint at the end of each level. It works offline once installed.
 
 ## Run locally
 ```bash
@@ -16,7 +16,7 @@ The phone needs an HTTPS link, so deploy the folder to any static host. All path
 On the iPhone: open the link in **Safari** → Share → **Add to Home Screen**.
 
 ## Edit the course
-All content is in `content.js`. Card types: `idea`, `flow`, `quiz` (`a` = index of the correct option; options are shuffled on screen), `match`, `order` (list the items in the correct order; they are shuffled on screen), `checkpoint`.
+Content lives in `content.js` and `content-a.js`, `content-b.js`, `content-c.js`; `content-order.js` sets the level order. Card types: `idea`, `flow`, `quiz` (`a` = index of the correct option; options are shuffled on screen), `match`, `order` (list the items in the correct order; they are shuffled on screen), `checkpoint`.
 When you deploy changes, bump `VERSION` in `sw.js` so installed phones pick up the new content.
 
 Progress is stored only on the device (localStorage). There are no accounts and no tracking.

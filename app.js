@@ -3,7 +3,7 @@
   const COURSE = window.COURSE, GLOSSARY = window.GLOSSARY;
   const KEY = "aipilled.v1";
   const XP_READ = 2, XP_RIGHT = 10, XP_GAME = 15, XP_NOTE = 5;
-  const RANKS = [[0, "Curious"], [60, "Prompt-curious"], [160, "Tool-literate"], [300, "Builder-minded"], [450, "AI-pilled"], [600, "Operator"]];
+  const RANKS = [[0, "Curious"], [120, "Prompt-curious"], [350, "Tool-literate"], [700, "Builder-minded"], [1100, "Agent wrangler"], [1500, "AI-pilled"], [1900, "Operator"]];
 
   // ---------- icons (filled only) ----------
   const P = {
@@ -115,7 +115,7 @@
       </section>
 
       <section class="section">
-        <h2 class="section-label">The path</h2>
+        <h2 class="section-label">The path · ${COURSE.length} levels · about ${Math.round(COURSE.reduce((a, L) => a + L.cards.length, 0) * 0.5 / 60 * 2) / 2} hours</h2>
         <div class="list" data-testid="levels">
           ${COURSE.map((L, i) => {
             const st = lv(L.id), open = unlocked(i), isCur = !allDone && i === curIdx;
@@ -124,7 +124,7 @@
               : open ? "" : ic("lock");
             return `<button class="level ${st.done ? "done" : ""} ${isCur ? "current" : ""}" data-go="${L.id}" ${open ? "" : "disabled"} title="${esc(L.title)}">
               <span class="level-num num">${i + 1}</span>
-              <span class="level-body"><span class="level-title">${esc(L.title)}</span><span class="level-sub">${esc(L.sub)}</span></span>
+              <span class="level-body"><span class="level-title">${esc(L.title)}</span><span class="level-sub">${esc(L.sub)} · <span class="num">${Math.max(1, Math.round(L.cards.length * 0.5))} min</span></span></span>
               <span class="level-meta">${meta}</span>
             </button>`;
           }).join("")}

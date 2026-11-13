@@ -281,8 +281,8 @@ window.COURSE = [
       { t: "quiz", q: "Which split is MECE for \"review supplier risk\"?",
         o: ["Big suppliers / risky suppliers / French suppliers", "By country: France, rest of EU, rest of world", "Important ones / the others / urgent ones", "Whatever the AI suggests"],
         a: 1, why: "Every supplier lands in exactly one bucket, and none is left out." },
-      { t: "idea", k: "Graduation", h: "You can now hold your own in the room.",
-        b: "You know what an LLM is and isn't, how software is built, what each tool does, where the moats are, and a method to stay in charge. Next step: pick one repetitive task from your week and run the loop on it." },
+      { t: "idea", k: "Almost there", h: "You can now hold your own in the room.",
+        b: "You know what an LLM is and isn't, how software is built, what each tool does, where the moats are, and a method to stay in charge. One level left: your 30-day plan to make it stick." },
       { t: "checkpoint" }
     ]
   }

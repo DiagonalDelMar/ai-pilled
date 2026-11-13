@@ -1,6 +1,6 @@
 // Offline cache. Bump VERSION on every deploy so phones pick up new content.
-const VERSION = "aipilled-v1";
-const FILES = ["./", "index.html", "styles.css", "app.js", "content.js", "manifest.webmanifest",
+const VERSION = "aipilled-v2";
+const FILES = ["./", "index.html", "styles.css", "app.js", "content.js", "content-a.js", "content-b.js", "content-c.js", "content-order.js", "manifest.webmanifest",
   "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
